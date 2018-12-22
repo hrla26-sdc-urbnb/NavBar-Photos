@@ -1,9 +1,15 @@
-const app = require('./app.js');
-const http = require('http');
-require('dotenv').config();
+const express = require('express');
+const parser = require('body-parser');
+const path = require('path');
+const router = require('./router.js');
 
-const port = process.env.PORT || 3000;
+const app = express();
 
-const server = http.createServer(app);
+app.use(parser.json());
+app.use(parser.urlencoded({ extended: true }));
 
-server.listen(port, () => console.log('server connected'));
+app.use(express.static(path.join(__dirname, '../client/public')));
+
+app.use('/api', router);
+
+module.exports = app;

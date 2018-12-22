@@ -1,15 +1,10 @@
-const express = require('express');
-const parser = require('body-parser');
-const path = require('path');
-const router = require('./router.js');
+const app = require('./app.js');
+const http = require('http');
+const db = require('../db/index');
+const { Listings, Photos } = require('../db/models');
 
-const app = express();
+const port = 3000;
 
-app.use(parser.json());
-app.use(parser.urlencoded({ extended: true }));
+const server = http.createServer(app);
 
-app.use('/api', router);
-
-app.use(express.static(path.join(__dirname, '../client/public')));
-
-module.exports = app;
+server.listen(port, () => console.log('server connected'));
