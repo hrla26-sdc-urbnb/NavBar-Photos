@@ -3,11 +3,11 @@ const request = require('supertest');
 
 describe('The server should', () => {
     test('respond to get requests', () => (
-        request(app).get('/api').expect(200)
+        request(app).get('/api/1').expect(200)
     ));
     test('send data back', () => (
         request(app).get('/api/1').expect('Content-Type', /json/)
-    ))
+    ));
 });
 
 

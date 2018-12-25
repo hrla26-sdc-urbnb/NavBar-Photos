@@ -1,7 +1,5 @@
-const app = require('./app.js');
 const http = require('http');
-const db = require('../db/index');
-const { Listings, Photos } = require('../db/models');
+const app = require('./app.js');
 
 const port = 3000;
 

@@ -1,15 +1,15 @@
 const express = require('express');
-const parser = require('body-parser');
 const path = require('path');
-const router = require('./router.js');
+const { Photos } = require('../db/models');
 
 const app = express();
 
-app.use(parser.json());
-app.use(parser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, '../react-client/public')));
 
-app.use(express.static(path.join(__dirname, '../client/public')));
-
-app.use('/api', router);
+app.get('/api/photos/:id', (req, res) => {
+  Photos.findAll({ where: { listing_id: req.params.id } })
+    .then(data => res.status(200).send(data))
+    .catch(err => console.log(err));
+});
 
 module.exports = app;
