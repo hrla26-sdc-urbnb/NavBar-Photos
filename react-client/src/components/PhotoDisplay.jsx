@@ -18,7 +18,7 @@ export default class PhotoDisplay extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='photodisplaywrapper'>
                 photo display!!
             </div>
         )

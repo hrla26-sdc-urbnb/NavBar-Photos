@@ -15,7 +15,7 @@ export default class App extends React.Component {
     render() {
         return (
             <div>
-                <div className="mainnavbar"><MainNavBar /></div>
+                <MainNavBar />
                 {this.state.showSecondary && <div className="secondarynavbar"><SecondaryNavBar /></div>}
                 <div className="photodisplay"><PhotoDisplay /></div>
             </div>
