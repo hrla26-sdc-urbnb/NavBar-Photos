@@ -39,7 +39,12 @@ export default class HelpModal extends React.Component {
             </div>
           </div>
         </div>
-        <div className='helpbottom'></div>
+        <div className='helpbottom'>
+          <a className='visithelp' href='https://www.airbnb.com/help'>
+            <div className='visithelp'>Visit the Help Center</div>
+          </a>
+          <a className='feedbacklink' href='https://www.airbnb.com/help'>Give feedback</a>
+        </div>
       </div>
     )
   }

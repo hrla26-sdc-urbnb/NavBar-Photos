@@ -8,7 +8,7 @@ export default class MainNavBar extends React.Component {
     this.state = {
       searchbar: false,
       hostbutton: false,
-      helpbutton: true,
+      helpbutton: false,
       signupbutton: false,
       loginbutton: false
     }

@@ -188,8 +188,21 @@ input:focus {
   z-index: 5;
   border-left: 1px solid rgba(200, 200, 200, 0.25);
   box-shadow: -2px 0 3px rgba(190, 190, 190, 0.25);
+  display: flex;
+  flex-direction: column;
 }
 
+.closehelp {
+  right: 15px;
+  position: fixed;
+  font-weight: 100;
+  font-size: 45px;
+  transform: rotate(-45deg);
+}
+
+.closehelp:hover {
+  cursor: pointer;
+}
 .helptop {
   height: 62px;
   border-bottom: 1px solid rgba(200, 200, 200, 0.25);
@@ -198,9 +211,12 @@ input:focus {
   font-weight: 500;
 }
 
+/* start middle help section */
+
 .helpmiddle {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 .helpsearchbox {
   font-weight: 400;
@@ -215,6 +231,7 @@ input:focus {
   background-repeat: no-repeat;
   background-size: 26px;
   background-position: 9px 50%;
+  border-radius: 2px;
 }
 .helpheader {
   font-size: 11.5px;
@@ -239,6 +256,9 @@ input:focus {
   background-color: rgba(200, 200, 200, 0.25);
 }
 
+.helplink {
+  width: 296px;
+}
 .helplink:hover {
   text-decoration: underline;
 }
@@ -251,16 +271,48 @@ a.helplink:hover {
 text-decoration: underline;
 }
 
+/* end middle help section */
 
-.closehelp {
-  right: 15px;
+/* start bottom help section */
+.helpbottom {
+  border-top: 1px solid rgba(200, 200, 200, 0.25);
+  align-content: center;
+  height: 102px;
+  width: 100%;
   position: fixed;
-  font-weight: 100;
-  font-size: 45px;
-  transform: rotate(-45deg);
+  bottom: 0;
+  background: white;
 }
 
-.closehelp:hover {
-  cursor: pointer;
+a.feedbacklink {
+  color: rgb(0, 132, 137);
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  top: 11px;
+  left: 128px;
 }
+
+a.feedbacklink:hover {
+  text-decoration: underline;
+}
+
+.visithelp {
+  background: rgb(0, 132, 137);
+  width: 310px;
+  height: 48px;
+  border-radius: 4px;
+  position: relative;
+  left: 10px;
+  top: 5px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: center;
+}
+
+a.visithelp {
+  color: white;
+}
+/* end bottom help section */
+
 /* end help modal styling */
