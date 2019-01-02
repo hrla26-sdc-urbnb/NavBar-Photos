@@ -412,7 +412,17 @@ a.lostpw:hover {
   text-decoration: underline;
 }
 
+.showlogin.hide {
+  margin-left: 406px;
+}
+
 /* end login modal styling */
+
+/* start su w/ email modal styling */
+
+
+
+/* end su w/ email modal styling */
 
 /* start shared signup/login modal styling */
 
@@ -444,6 +454,10 @@ a.acccheck:hover {
   font-weight: 400;
   text-indent: 10px;
   border: 1px solid rgba(160, 160, 160, 0.3);
+}
+
+.form:focus {
+  border: 1px solid #008489;
 }
 
 .form.email {
@@ -516,6 +530,10 @@ a.acccheck:hover {
   margin-right: 490px;
 }
 
+.closebutton:hover {
+  cursor: pointer;
+}
+
 .fbbutton {
   margin-left: 2px;
   background-color: rgb(69, 104, 178);
@@ -563,6 +581,10 @@ a.acccheck:hover {
   border-radius: 4px;
   line-height: 48px;
   border-top: 1px solid rgba(200, 200, 200, 0.25);
+}
+
+.but:hover {
+  cursor: pointer;
 }
 
 /* end shared signup/login modal styling */

@@ -90,7 +90,7 @@ export default class MainNavBar extends React.Component {
     }
   }
 
-    closeLogin(e) {
+  closeLogin(e) {
     if (e.target.className === 'closebutton' || !e.target.className.includes('login')) {
       this.closeAll();
       document.removeEventListener('click', this.closeLogin);
@@ -99,7 +99,11 @@ export default class MainNavBar extends React.Component {
   }
 
   signupWithEmail() {
-    this.setState({ signupWithEmail: true });
+    // this.closeAll();
+    this.setState({ 
+      signupbutton: true,
+      signupWithEmail: true 
+    });
   }
 
   render() {
@@ -147,7 +151,7 @@ export default class MainNavBar extends React.Component {
           <HostDropdown />}
           {this.state.helpbutton && 
           <HelpModal />}
-          {this.state.signupWithEmail ? 
+          {this.state.signupWithEmail && this.state.signupbutton ? 
           <SignupWithEmail /> : 
           this.state.signupbutton ? 
           <SignupModal 

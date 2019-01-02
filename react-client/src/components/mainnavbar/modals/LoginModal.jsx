@@ -18,8 +18,8 @@ export default class LoginModal extends React.Component {
     <div className='modalcontainer'>
      <div className='innermodal loginmodal'>
       <div className='closebutton'></div>
-        <div className='fbbutton li'>Log in with Facebook</div>
-        <div className='googlebutton li'>Log in with Google</div>
+        <div className='fbbutton but li'>Log in with Facebook</div>
+        <div className='googlebutton but li'>Log in with Google</div>
         <div className='orseperator login'>or</div>
         <div className='seperator login'></div>
         <input className='form email login' type='text' placeholder='Email Address'></input>
@@ -33,9 +33,9 @@ export default class LoginModal extends React.Component {
         </label>
          {this.state.hidePW ? 
           <div onClick={this.pwHandler} className='showlogin'>Show password</div> :
-          <div onClick={this.pwHandler} className='showlogin'>Hide password</div>
+          <div onClick={this.pwHandler} className='showlogin hide'>Hide password</div>
         }
-        <div className='pinkbutton li'>Log in</div>
+        <div className='pinkbutton but li'>Log in</div>
         <a className='lostpw' href='https://www.airbnb.com/forgot_password'>Forgot password?</a>
         <div className='seperator sep2 login'></div>
         <div className='acccheck su'>

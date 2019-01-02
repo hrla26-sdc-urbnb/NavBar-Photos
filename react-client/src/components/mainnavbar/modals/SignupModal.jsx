@@ -4,11 +4,11 @@ const SignupModal = props => (
   <div className='modalcontainer'>
     <div className='innermodal su'>
       <div className='closebutton'></div>
-      <div className='fbbutton'> Continue with Facebook</div>
-      <div className='googlebutton'>Continue with Google</div>
+      <div className='fbbutton but'> Continue with Facebook</div>
+      <div className='googlebutton but'>Continue with Google</div>
       <div className='orseperator su'>or</div>
       <div className='seperator su'></div>
-      <div className='pinkbutton signup'>Sign up with Email</div>
+      <div className='pinkbutton signup but' onClick={props.signupWithEmail}>Sign up with Email</div>
       <div className='seperator sep2 su'></div>
       <div className='acccheck su'>
       Already have an Airbnb account?
