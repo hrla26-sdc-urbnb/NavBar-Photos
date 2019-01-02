@@ -1,6 +1,9 @@
 import React from 'react';
-import HostDropdown from './HostDropdown.jsx';
-import HelpModal from './HelpModal.jsx';
+import HostDropdown from './modals/HostDropdown.jsx';
+import HelpModal from './modals/HelpModal.jsx';
+import SignupModal from './modals/SignupModal.jsx';
+import SignupWithEmail from './modals/SignupWithEmail.jsx';
+import LoginModal from './modals/LoginModal.jsx';
 
 export default class MainNavBar extends React.Component {
   constructor(props) {
@@ -10,6 +13,7 @@ export default class MainNavBar extends React.Component {
       hostbutton: false,
       helpbutton: false,
       signupbutton: false,
+      signupWithEmail: false,
       loginbutton: false
     }
     this.openItem = this.openItem.bind(this);
@@ -17,8 +21,9 @@ export default class MainNavBar extends React.Component {
     this.closeSearch = this.closeSearch.bind(this);
     this.closeHost = this.closeHost.bind(this);
     this.closeHelp = this.closeHelp.bind(this);
-    // this.closeSignup = this.closeSignup.bind(this);
-    // this.closeLogin = this.closeLogin.bind(this);
+    this.closeSignup = this.closeSignup.bind(this);
+    this.closeLogin = this.closeLogin.bind(this);
+    this.signupWithEmail = this.signupWithEmail.bind(this);
   }
   
   openItem(e) {
@@ -33,12 +38,12 @@ export default class MainNavBar extends React.Component {
     else if (target.includes('help')) {
       document.addEventListener('click', this.closeHelp);
     }
-    // else if (target.includes('signup')) {
-    //   document.addEventListener('click', this.closeSignup);
-    // } 
-    // else if (target.includes('login')) {
-    //   document.addEventListener('click', this.closeLogin);
-    // }
+    else if (target.includes('signup')) {
+      document.addEventListener('click', this.closeSignup);
+    } 
+    else if (target.includes('login')) {
+      document.addEventListener('click', this.closeLogin);
+    }
   }
   
   closeAll() {
@@ -77,21 +82,25 @@ export default class MainNavBar extends React.Component {
     }
   }
 
-  // closeSignup(e) {
-  //   if (e.target.className === 'closeSignup' || !e.target.className.includes('signup')) {
-  //     this.closeAll();
-  //     document.removeEventListener('click', this.closeSignup);
-  //     this.openItem(e);
-  //   }
-  // }
+  closeSignup(e) {
+    if (e.target.className === 'closebutton' || !e.target.className.includes('su')) {
+      this.closeAll();
+      document.removeEventListener('click', this.closeSignup);
+      this.openItem(e);
+    }
+  }
 
-  //   closeLogin(e) {
-  //   if (e.target.className === 'closeLogin' || !e.target.className.includes('login')) {
-  //     this.closeAll();
-  //     document.removeEventListener('click', this.closeLogin);
-  //     this.openItem(e);
-  //   }
-  // }
+    closeLogin(e) {
+    if (e.target.className === 'closebutton' || !e.target.className.includes('login')) {
+      this.closeAll();
+      document.removeEventListener('click', this.closeLogin);
+      this.openItem(e);
+    }
+  }
+
+  signupWithEmail() {
+    this.setState({ signupWithEmail: true });
+  }
 
   render() {
     return (
@@ -138,6 +147,14 @@ export default class MainNavBar extends React.Component {
           <HostDropdown />}
           {this.state.helpbutton && 
           <HelpModal />}
+          {this.state.signupWithEmail ? 
+          <SignupWithEmail /> : 
+          this.state.signupbutton ? 
+          <SignupModal 
+            signupWithEmail={this.signupWithEmail} 
+          /> : null}
+          {this.state.loginbutton && 
+          <LoginModal />}
         </div>
       </div>
     )

@@ -1,5 +1,5 @@
 import React from 'react';
-import MainNavBar from './MainNavBar.jsx';
+import MainNavBar from './mainnavbar/MainNavBar.jsx';
 import SecondaryNavBar from './SecondaryNavBar.jsx';
 import PhotoDisplay from './PhotoDisplay.jsx';
 
