@@ -174,7 +174,8 @@ a.acccheck:hover {
 }
 
 .modalcontainer {
-  overflow: hidden;
+  z-index: 3;
+  overflow-y: hidden;
   position: fixed;
   top: 0;
   left: 0;
