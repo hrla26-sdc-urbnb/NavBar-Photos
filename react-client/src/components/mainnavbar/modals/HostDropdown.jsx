@@ -1,27 +1,29 @@
 import React from 'react';
+import classNames from 'classnames';
+import s from '../../../styles/hostdropdown.css'
 
 const HostDropdown = () => (
-  <div className='hostdropdown hostbutton'>
-    <div className='tophost'>
-      <div className='dropdownheading host'>HOMES</div>
+  <div id='host' className={classNames(s.hostdropdown, s.hostbutton)}>
+    <div id='host' className={s.tophost}>
+      <div id='host' className={s.dropdownheading}>HOMES</div>
         <a href='https://www.airbnb.com/become-a-host/room'>
-          <div className='hdditem host'>
-            <div className='itemheader host'>List your place</div>
-            <div className='itemdescrip host'>Earn up to $'local_max' a month hosting in 'current_location'.</div>
+          <div className={s.hdditem}>
+            <div className={s.itemheader}>List your place</div>
+            <div className={s.itemdescrip}>Earn up to $'local_max' a month hosting in 'current_location'.</div>
           </div>
         </a>
         <a href='https://www.airbnb.com/host/homes?from_nav=1'>
-          <div className='hdditem host'>
-          <div className='itemheader host'>Learn about hosting your home</div>
+          <div className={s.hdditem}>
+          <div className={s.itemheader}>Learn about hosting your home</div>
           </div>
         </a>
     </div>
-    <div className='bottomhost host'>
-      <div className='dropdownheading host'>EXPERIENCES</div>
+    <div id='host' className={s.bottomhost}>
+      <div id='host' className={s.dropdownheading}>EXPERIENCES</div>
         <a href='https://www.airbnb.com/host/experiences?from_nav=1'>
-          <div className='hdditem host'>
-            <div className='itemheader host'>Host an experience</div>
-            <div className='itemdescrip host'>Earn money leading people on activities you love</div>
+          <div className={s.hdditem}>
+            <div className={s.itemheader}>Host an experience</div>
+            <div className={s.itemdescrip}>Earn money leading people on activities you love</div>
           </div>
         </a>
     </div>

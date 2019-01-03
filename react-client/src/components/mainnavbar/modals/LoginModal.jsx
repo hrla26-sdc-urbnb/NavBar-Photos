@@ -1,4 +1,6 @@
 import React from 'react';
+import classNames from 'classnames';
+import s from '../../../styles/signlogmodals.css'
 
 export default class LoginModal extends React.Component {
   constructor(props) {
@@ -15,32 +17,32 @@ export default class LoginModal extends React.Component {
   
   render() {
     return (
-    <div className='modalcontainer'>
-     <div className='innermodal loginmodal'>
-      <div className='closebutton'></div>
-        <div className='fbbutton but li'>Log in with Facebook</div>
-        <div className='googlebutton but li'>Log in with Google</div>
-        <div className='orseperator login'>or</div>
-        <div className='seperator login'></div>
-        <input className='form email login' type='text' placeholder='Email Address'></input>
+    <div className={s.modalcontainer}>
+      <div id='loginmodal' className={classNames(s.innermodal, s.loginmodal)}>
+      <div className={s.closebutton}></div>
+      <div className={classNames(s.fbbutton, s.but, s.li)}>Log in with Facebook</div>
+      <div className={classNames(s.googlebutton, s.but, s.li)}>Log in with Google</div>
+      <div id='loginmodal' className={s.orseperator}>or</div>
+      <div id='loginmodal' className={s.seperator}></div>
+        <input id='loginmodal' className={classNames(s.form, s.email)} type='text' placeholder='Email Address'></input>
         {this.state.hidePW ? 
-          <input className='form password login' type='password' placeholder='Password'></input> :
-          <input className='form password login' type='text' placeholder='Password'></input>
+          <input id='loginmodal' className={classNames(s.form, s.password)} type='password' placeholder='Password'></input> :
+          <input id='loginmodal' className={classNames(s.form, s.password)} type='text' placeholder='Password'></input>
         }
-        <label className='rememberlogin'>Remember me
-          <input className='login' type='checkbox'></input>
-          <span className='checkmark login'></span>
+        <label id='loginmodal' className={s.rememberlogin}>Remember me
+          <input id='loginmodal' type='checkbox'></input>
+          <span id='loginmodal' className={s.checkmark}></span>
         </label>
          {this.state.hidePW ? 
-          <div onClick={this.pwHandler} className='showlogin'>Show password</div> :
-          <div onClick={this.pwHandler} className='showlogin hide'>Hide password</div>
+          <div id='loginmodal' onClick={this.pwHandler} className={s.showlogin}>Show password</div> :
+          <div id='loginmodal' onClick={this.pwHandler} className={classNames(s.showlogin, s.hide)}>Hide password</div>
         }
-        <div className='pinkbutton but li'>Log in</div>
-        <a className='lostpw' href='https://www.airbnb.com/forgot_password'>Forgot password?</a>
-        <div className='seperator sep2 login'></div>
-        <div className='acccheck su'>
+        <div className={classNames(s.pinkbutton, s.but, s.li)}>Log in</div>
+        <a className={s.lostpw} href='https://www.airbnb.com/forgot_password'>Forgot password?</a>
+        <div id='loginmodal' className={classNames(s.seperator, s.sep2)}></div>
+        <div id='loginmodal' className={s.acccheck}>
         Don't have an account?        
-        <a className='acccheck' href='https://www.airbnb.com/signup_login?'>Sign up</a>
+        <a className={s.acccheck}  href='https://www.airbnb.com/signup_login?'>Sign up</a>
       </div>
      </div>
     </div>

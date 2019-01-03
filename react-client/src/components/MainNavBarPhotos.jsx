@@ -3,7 +3,7 @@ import MainNavBar from './mainnavbar/MainNavBar.jsx';
 import SecondaryNavBar from './SecondaryNavBar.jsx';
 import PhotoDisplay from './PhotoDisplay.jsx';
 
-export default class App extends React.Component {
+export default class MainNavBarPhotos extends React.Component {
     constructor(props) {
         super(props);
         this.state = {

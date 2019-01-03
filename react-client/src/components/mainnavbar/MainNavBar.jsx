@@ -1,9 +1,11 @@
 import React from 'react';
+import classNames from 'classnames';
 import HostDropdown from './modals/HostDropdown.jsx';
 import HelpModal from './modals/HelpModal.jsx';
 import SignupModal from './modals/SignupModal.jsx';
 import SignupWithEmail from './modals/SignupWithEmail.jsx';
 import LoginModal from './modals/LoginModal.jsx';
+import s from '../../styles/mainnavbar.css';
 
 export default class MainNavBar extends React.Component {
   constructor(props) {
@@ -27,21 +29,21 @@ export default class MainNavBar extends React.Component {
   }
   
   openItem(e) {
-    const target = e.target.className.split(' ')[0];
+    const target = e.target.id;
     this.setState({ [target]: true });
-    if (target.includes('search')) {
+    if (target === 'searchbar') {
       document.addEventListener('click', this.closeSearch);
     }
-    else if (target.includes('host')) {
+    else if (target === 'hostbutton') {
       document.addEventListener('click', this.closeHost);
     }
-    else if (target.includes('help')) {
+    else if (target === 'helpbutton') {
       document.addEventListener('click', this.closeHelp);
     }
-    else if (target.includes('signup')) {
+    else if (target === 'signupbutton') {
       document.addEventListener('click', this.closeSignup);
     } 
-    else if (target.includes('login')) {
+    else if (target === 'loginbutton') {
       document.addEventListener('click', this.closeLogin);
     }
   }
@@ -57,7 +59,9 @@ export default class MainNavBar extends React.Component {
   }
   
   closeSearch(e) {
-    if (e.target.className.includes('searchwrapper') || !e.target.className.includes('search') ) {
+    if (e.target.id === 'searchbar') {
+      return;
+    } else {
       this.closeAll();
       document.removeEventListener('click', this.closeSearch);
       this.openItem(e);
@@ -65,17 +69,21 @@ export default class MainNavBar extends React.Component {
   }
 
   closeHost(e) {
-    if (e.target.className.includes('hostbutton') || !e.target.className.includes('host') ) {
+    if (e.target.id === 'host') {
+      return;
+    } else {
       this.closeAll();
       document.removeEventListener('click', this.closeHost);
-      if (!e.target.className.includes('hostbutton')) {
+      if (e.target.id === 'hostbutton') {
+        return;
+      } else {
         this.openItem(e);
       }
     }
   }
 
   closeHelp(e) {
-    if (e.target.className === 'closehelp' || !e.target.className.includes('help')) {
+    if (e.target.id === 'closehelp' || !e.target.className.includes('help')) {
       this.closeAll();
       document.removeEventListener('click', this.closeHelp);
       this.openItem(e);
@@ -83,7 +91,9 @@ export default class MainNavBar extends React.Component {
   }
 
   closeSignup(e) {
-    if (e.target.className === 'closebutton' || !e.target.className.includes('su')) {
+    if (e.target.id === 'signupmodal') {
+      return;
+    } else {
       this.closeAll();
       document.removeEventListener('click', this.closeSignup);
       this.openItem(e);
@@ -91,7 +101,9 @@ export default class MainNavBar extends React.Component {
   }
 
   closeLogin(e) {
-    if (e.target.className === 'closebutton' || !e.target.className.includes('login')) {
+    if (e.target.id === 'loginmodal') {
+      return;
+    } else {
       this.closeAll();
       document.removeEventListener('click', this.closeLogin);
       this.openItem(e);
@@ -99,7 +111,6 @@ export default class MainNavBar extends React.Component {
   }
 
   signupWithEmail() {
-    // this.closeAll();
     this.setState({ 
       signupbutton: true,
       signupWithEmail: true 
@@ -108,45 +119,47 @@ export default class MainNavBar extends React.Component {
 
   render() {
     return (
-      <div className='mainnavbarwrapper'>
-        <div className='mainnavbar'>
+      <div id='mainnavbarwrapper'>
+        <div className={s.mainnavbar}>
           <a href='https://www.airbnb.com'>
-            <div className='homebutton'></div>
+            <div className={s.homebutton}></div>
           </a>
-          <div className='searchwrapper'>
+          <div className={s.searchwrapper}>
             <input 
+              id='searchbar'
               className={
                 this.state.searchbar ? 
-                'searchclicked searchbar' : 
-                'searchbar'
+                classNames(s.searchclicked, s.searchbar) : 
+                s.searchbar
               } 
               type='text' 
               onClick={this.openItem} 
               placeholder='Search'>
             </input>
           </div>
-          <div className='mainbarbuttoncontainer'>
+          <div className={s.mainbarbuttoncontainer}>
             <div 
+              id='hostbutton'
               className={
                 this.state.hostbutton ? 
-                'hostbutton mainbarbutton buttonclicked' : 
-                'hostbutton mainbarbutton'
+                classNames(s.mainbarbutton, s.buttonclicked) : 
+                s.mainbarbutton
               } 
               onClick={this.openItem}>
                 Become a host
             </div>
-            <div className='helpbutton mainbarbutton' onClick={this.openItem}>
+            <div id='helpbutton' className={s.mainbarbutton} onClick={this.openItem}>
               Help    
             </div>
-            <div className='signupbutton mainbarbutton' onClick={this.openItem}>
+            <div id='signupbutton' className={s.mainbarbutton} onClick={this.openItem}>
               Sign up
             </div>
-            <div className='loginbutton mainbarbutton' onClick={this.openItem}>
+            <div id='loginbutton' className={s.mainbarbutton} onClick={this.openItem}>
               Log in
             </div>
           </div>
         </div>
-        <div className='modals'>
+        <div className={s.modals}>
           {this.state.hostbutton && 
           <HostDropdown />}
           {this.state.helpbutton && 

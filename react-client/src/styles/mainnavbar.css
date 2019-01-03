@@ -1,0 +1,89 @@
+.modals {
+  float: right;
+}
+
+.mainnavbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  padding-bottom: 13px;
+  padding-top: 5px;
+}
+
+.homebutton {
+  padding-left: 15px;
+  width: 50px;
+  height: 50px;
+  background-image: url('https://i.imgur.com/3tiSeIP.png');
+  background-size: 29px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+/* start searchbar styling */
+
+.searchwrapper {
+  flex: 1;
+}
+
+.searchbar {
+  height: 45px;
+  width: 460px;
+  margin-left: 10px;
+  box-shadow: 0 2px 5px rgba(190, 190, 190, 0.25);
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 700;
+  border: 1px solid rgba(160, 160, 160, 0.3);
+  background-image: url('https://i.imgur.com/I09hE2f.png');
+  background-repeat: no-repeat;
+  background-size: 21px;
+  background-position: 15px 50%;
+  text-indent: 50px;
+  transition: .3s;
+}
+
+.searchbar:hover {
+  box-shadow: 0 3px 5px rgba(140, 140, 140, 0.25);
+}
+
+.searchclicked {
+  width: 580px;
+  transition: .3s;
+}
+
+/* end searchbar styling */
+
+/* start main top bar button styling */
+
+.buttonclicked:hover {
+  border-bottom: 0px !important;
+}
+
+.mainbarbuttoncontainer {
+  width: 330px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: .2px;
+  color: rgb(60, 60, 60);
+}
+
+.mainbarbutton {
+  line-height: 74px;
+  text-align: center;
+  padding: 5px 7px;
+  height: 74px;
+}
+.mainbarbutton:hover {
+ border-bottom: 2px solid rgb(120, 120, 120);
+ height: 72px;
+ cursor: pointer;
+}
+
+/* end main top bar button styling */

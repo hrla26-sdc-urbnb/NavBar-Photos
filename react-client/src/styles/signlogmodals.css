@@ -1,0 +1,271 @@
+/* start signup modal styling */
+
+.pinkbutton.signup {
+  background-image: url('https://i.imgur.com/nOHnVBm.png');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 167px 50%;
+  text-indent: 198px;
+}
+
+/* end signup modal styling */
+
+/* start login modal styling */
+
+.loginmodal {
+  height: 563px !important;
+}
+
+.fbbutton.li {
+  background-position: 159px 50%;
+  text-indent: 183px;
+}
+
+.googlebutton.li {
+  background-position: 163px 50%;
+  text-indent: 192px;
+  background-size: 20px;
+}
+
+.orseperator.login {
+  margin-top: 16px !important;
+}
+
+.rememberlogin:hover {
+  cursor: pointer;
+}
+
+.rememberlogin {
+  position: absolute;
+  font-weight: 300;
+  top: 357px;
+  left: 58px;
+}
+
+.rememberlogin input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.pinkbutton.li {
+  text-align: center;
+  margin-top: 20px;
+}
+.checkmark {
+  position: absolute;
+  left: -26px;
+  height: 15px;
+  width: 15px;
+  border: 1px solid rgba(160, 160, 160, 0.3);
+  border-radius: 2px;
+}
+
+.rememberlogin input:checked ~ .checkmark {
+  background-color: #008489;
+  background-image: url('https://i.imgur.com/29zpTIF.png');
+  background-repeat: no-repeat;
+  background-size: 13px;
+  background-position: 50%;
+}
+
+.showlogin {
+  margin: 19px 0 0 400px;
+  font-size: 14px;
+  color: #008489;
+}
+
+.showlogin:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+a.lostpw {
+  font-size: 14px;
+  font-weight: 500;
+  color: #008489;
+  margin-top: 16px;
+}
+
+a.lostpw:hover {
+  text-decoration: underline;
+}
+
+.showlogin.hide {
+  margin-left: 406px;
+}
+
+/* end login modal styling */
+
+/* start su w/ email modal styling */
+
+
+
+/* end su w/ email modal styling */
+
+/* start shared signup/login modal styling */
+
+.sep2 {
+  margin-top: 28px;
+}
+
+.acccheck {
+  color: rgb(80, 80, 80);
+  margin-top: 10px;
+}
+
+a.acccheck{
+  color: #008489;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+a.acccheck:hover {
+  text-decoration: underline;
+}
+
+.form {
+  margin-top: 18px;
+  width: 500px;
+  height: 43px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 400;
+  text-indent: 10px;
+  border: 1px solid rgba(160, 160, 160, 0.3);
+}
+
+.form:focus {
+  border: 1px solid #008489;
+}
+
+.form.email {
+  background-image: url('https://i.imgur.com/jmSQ3vr.png');
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position: 475px 50%;
+}
+
+.form.password {
+  background-image: url('https://i.imgur.com/rujlOjp.png');
+  background-repeat: no-repeat;
+  background-size: 14px;
+  background-position: 476px 50%;
+}
+
+.orseperator {
+  margin-top: 20px;
+  font-size: 14px;
+  color: rgb(80, 80, 80);
+  background: white;
+  width: 48px;
+  z-index: 100;
+  text-align: center;
+}
+
+.seperator {
+  height: 1px;
+  width: 506px;
+  background: rgba(120, 120, 120, 0.25);
+  position: relative;
+  top: -7px;
+}
+
+.modalcontainer {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.innermodal {
+  width: 568px;
+  height: 368px;
+  background: white;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.closebutton {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  background-image: url('https://i.imgur.com/1UllZBH.png');
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: 50%;
+  box-shadow: 0 0 8px rgba(140, 140, 140, 0.8);
+  margin-top: 20px;
+  margin-right: 490px;
+}
+
+.closebutton:hover {
+  cursor: pointer;
+}
+
+.fbbutton {
+  margin-left: 2px;
+  background-color: rgb(69, 104, 178);
+  color: white;
+  font-weight: 500;
+  font-size: 17px;
+  width: 504px;
+  height: 48px;
+  margin-top: 20px;
+  border-radius: 4px;
+  line-height: 48px;
+  text-indent: 174px;
+  background-image: url('https://i.imgur.com/YGtYDDv.png');
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: 147px 50%;
+}
+
+.googlebutton {
+  background-color: white;
+  color: rgb(50, 50, 50);
+  font-weight: 500;
+  font-size: 17px;
+  width: 500px;
+  height: 44px;
+  margin-top: 8px;
+  border-radius: 4px;
+  line-height: 48px;
+  text-indent: 182px;
+  border: 2px solid rgb(120, 120, 120);
+  background-image: url('https://i.imgur.com/uDdw5l9.png');
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-position: 150px 50%;
+}
+
+.pinkbutton {
+  background: rgb(255, 90, 95);
+  color: white;
+  font-weight: 500;
+  font-size: 17px;
+  width: 504px;
+  height: 47px;
+  margin-top: 15px;
+  border-radius: 4px;
+  line-height: 48px;
+  border-top: 1px solid rgba(200, 200, 200, 0.25);
+}
+
+.but:hover {
+  cursor: pointer;
+}
+
+/* end shared signup/login modal styling */
