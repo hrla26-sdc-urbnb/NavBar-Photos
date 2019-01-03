@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import s from '../styles/photodisplay.css';
 import PhotoDisplayModal from './PhotoDisplayModal.jsx';
 
 export default class PhotoDisplay extends React.Component {
@@ -18,7 +19,7 @@ export default class PhotoDisplay extends React.Component {
 
     render() {
         return (
-            <div className='photodisplaywrapper'>
+            <div className={s.photodisplaywrapper}>
                 photo display!!
             </div>
         )

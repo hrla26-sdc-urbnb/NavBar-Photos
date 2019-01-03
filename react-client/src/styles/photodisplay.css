@@ -1,8 +1,27 @@
 .photodisplaywrapper {
-  margin-top: 5px;
-  width: 100%;
+  margin: 5px 0 0 -8px;
+  width: calc(100% + 14px);
   background-color: gray;
   border: 1px solid rgb(50, 50, 50);
+  height: 740px;
+}
+
+@media only screen and (max-height: 999px) {
+  .photodisplaywrapper {
+    height: 590px;
+  }
+}
+
+@media only screen and (max-height: 849px) {
+  .photodisplaywrapper {
+    height: 440px;
+  }
+}
+
+@media only screen and (max-height: 699px) {
+  .photodisplaywrapper {
+    height: 293px;
+  }
 }
 
 
