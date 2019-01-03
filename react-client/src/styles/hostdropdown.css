@@ -3,7 +3,6 @@
 .hostdropdown {
   position: relative;
   border: 1px solid rgba(200, 200, 200, 0.25);
-  box-shadow: 0 2px 5px rgba(190, 190, 190);
   margin-top: 4px;
   z-index: 5;
   height: 388px;
