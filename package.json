@@ -1,0 +1,55 @@
+{
+  "name": "NavBar-Photos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server-dev": "nodemon rest-server/index.js",
+    "react-dev": "webpack -d --watch",
+    "test": "jest --detectOpenHandles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HouseTargaryan/NavBar-Photos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HouseTargaryan/NavBar-Photos/issues"
+  },
+  "homepage": "https://github.com/HouseTargaryan/NavBar-Photos#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-react-css-modules": "^5.0.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "css-loader": "^2.1.0",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.1",
+    "classnames": "^2.2.6"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "jest": "^23.6.0",
+    "mysql": "^2.14.1",
+    "mysql2": "^1.6.4",
+    "nodemon": "^1.18.9",
+    "prop-types": "^15.6.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "sequelize": "^4.42.0"
+  }
+}

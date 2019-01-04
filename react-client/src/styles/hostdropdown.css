@@ -1,0 +1,58 @@
+/* start 'Become a host' dropdown styling */
+
+.hostdropdown {
+  position: relative;
+  border: 1px solid rgba(200, 200, 200, 0.25);
+  margin-top: 4px;
+  z-index: 5;
+  height: 388px;
+  width: 316px;
+  margin-right: 208px;
+  background-color: white;
+}
+
+.tophost {
+  height: 216px;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.25);
+  background-image: url('https://i.imgur.com/VnBYAnI.png');
+  background-repeat: no-repeat;
+  background-size: 27px;
+  background-position: 266px 75px;
+}
+
+.bottomhost {
+  background-image: url('https://i.imgur.com/2VtjdTu.png');
+  background-repeat: no-repeat;
+  background-size: 27px;
+  background-position: 266px 75px;
+}
+
+.dropdownheading {
+  font-size: 12px;
+  letter-spacing: 3.5px;
+  color: rgb(120, 120, 120);
+  font-weight: 600;
+  padding: 32px 0 2px 24px;
+}
+.itemheader {
+  padding-top: 29px;
+  padding-left: 24px;
+  font-size: 14px;
+  color: rgb(80, 80, 80);
+  font-weight: 500;
+}
+
+.itemdescrip {
+  padding-top: 9px;
+  font-size: 15px;
+  color: rgb(80, 80, 80);
+  font-weight: 300;
+  padding-left: 24px;
+  width: 230px;
+}
+
+.hdditem:hover .itemheader {
+  text-decoration: underline;
+}
+
+/* end 'Become a host' dropdown styling */

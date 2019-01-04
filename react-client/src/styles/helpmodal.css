@@ -1,0 +1,141 @@
+/* start help modal styling */
+
+.helpmodal {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  min-height: 100vh;
+  width: 350px;
+  background-color: white;
+  z-index: 5;
+  border-left: 1px solid rgba(200, 200, 200, 0.25);
+  box-shadow: -2px 0 3px rgba(190, 190, 190, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.closehelp {
+  right: 15px;
+  position: fixed;
+  font-weight: 100;
+  font-size: 45px;
+  transform: rotate(-45deg);
+}
+
+.closehelp:hover {
+  cursor: pointer;
+}
+.helptop {
+  height: 62px;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.25);
+  line-height: 62px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* start middle help section */
+
+.helpmiddle {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.helpsearchbox {
+  font-weight: 400;
+  font-size: 14px;
+  width: 296px;
+  height: 46px;
+  margin-top: 35px;
+  margin-left: 24px;
+  border: 1px solid rgba(160, 160, 160, 0.25);
+  text-indent: 52px;
+  background-image: url('https://i.imgur.com/wl734rp.png');
+  background-repeat: no-repeat;
+  background-size: 26px;
+  background-position: 9px 50%;
+  border-radius: 2px;
+}
+.helpheader {
+  font-size: 11.5px;
+  letter-spacing: .5px;
+  color: rgb(120, 120, 120);
+  font-weight: 600;
+  margin: 35px 0 2px 24px;
+}
+
+.helparticle {
+  margin-left: 24px;
+  width: 296px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(80, 80, 80);
+}
+
+.helparticle:hover {
+  background-color: rgba(200, 200, 200, 0.25);
+}
+
+.helplink {
+  width: 296px;
+}
+.helplink:hover {
+  text-decoration: underline;
+}
+
+a.helplink {
+  color: rgb(80, 80, 80);
+}
+
+a.helplink:hover {
+text-decoration: underline;
+}
+
+/* end middle help section */
+
+/* start bottom help section */
+.helpbottom {
+  border-top: 1px solid rgba(200, 200, 200, 0.25);
+  align-content: center;
+  height: 102px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: white;
+}
+
+a.feedbacklink {
+  color: rgb(0, 132, 137);
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  top: 11px;
+  left: 128px;
+}
+
+a.feedbacklink:hover {
+  text-decoration: underline;
+}
+
+.visithelp {
+  background: rgb(0, 132, 137);
+  width: 310px;
+  height: 48px;
+  border-radius: 4px;
+  position: relative;
+  left: 10px;
+  top: 5px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: center;
+}
+
+a.visithelp {
+  color: white;
+}
+/* end bottom help section */
+
+/* end help modal styling */
