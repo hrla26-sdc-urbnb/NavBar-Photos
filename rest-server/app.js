@@ -1,9 +1,11 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const { Photos } = require('../db/models');
 
 const app = express();
 
+app.use(cors());
 app.use(express.static(path.join(__dirname, '../react-client/public')));
 
 app.get('/api/photos/:id', (req, res) => {
