@@ -6,7 +6,8 @@
   "scripts": {
     "server-dev": "nodemon rest-server/index.js",
     "react-dev": "webpack -d --watch",
-    "test": "jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles",
+    "seed": "mysql -u root -p < ./db/seed.sql"
   },
   "repository": {
     "type": "git",

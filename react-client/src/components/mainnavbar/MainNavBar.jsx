@@ -48,6 +48,7 @@ export default class MainNavBar extends React.Component {
     }
   }
   
+  // close all other modals
   closeAll() {
     this.setState({
       searchbar: false,
@@ -58,6 +59,7 @@ export default class MainNavBar extends React.Component {
     })
   }
   
+  // clickhandler while search is open
   closeSearch(e) {
     if (e.target.id === 'searchbar') {
       return;
@@ -68,6 +70,7 @@ export default class MainNavBar extends React.Component {
     }
   }
 
+  // clickhandler while host dropdown is open
   closeHost(e) {
     if (e.target.id === 'host') {
       return;
@@ -82,6 +85,7 @@ export default class MainNavBar extends React.Component {
     }
   }
 
+  // clickhandler while help modal is open
   closeHelp(e) {
     if (e.target.id === 'closehelp' || !e.target.className.includes('help')) {
       this.closeAll();
@@ -90,6 +94,7 @@ export default class MainNavBar extends React.Component {
     }
   }
 
+  // clickhandler while signup modal is open
   closeSignup(e) {
     if (e.target.id === 'signupmodal') {
       return;
@@ -100,6 +105,7 @@ export default class MainNavBar extends React.Component {
     }
   }
 
+  // clickhandler while signup modal is open
   closeLogin(e) {
     if (e.target.id === 'loginmodal') {
       return;

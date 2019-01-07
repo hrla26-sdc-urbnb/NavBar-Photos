@@ -1,13 +1,13 @@
 const Sequelize = require('sequelize');
 const db = require('./index');
 
-const Listings = db.define('listings', {
-  name: Sequelize.STRING,
-},
-{
-  timestamps: false,
-  freezeTableName: true,
-});
+// const Listings = db.define('listings', {
+//   name: Sequelize.STRING,
+// },
+// {
+//   timestamps: false,
+//   freezeTableName: true,
+// });
 
 const Photos = db.define('photos', {
   url: Sequelize.STRING,
@@ -19,10 +19,10 @@ const Photos = db.define('photos', {
   freezeTableName: true,
 });
 
-Listings.sync();
+// Listings.sync();
 Photos.sync();
 
 module.exports = {
-  Listings,
+  // Listings,
   Photos,
 };

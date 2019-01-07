@@ -4,7 +4,7 @@ export default class PhotoDisplayModal extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            
         }
     }
     render() {
