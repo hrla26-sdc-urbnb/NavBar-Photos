@@ -175,7 +175,6 @@ a.acccheck:hover {
 
 .modalcontainer {
   z-index: 3;
-  overflow-y: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -184,6 +183,10 @@ a.acccheck:hover {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
+}
+
+*.modalcontainer {
+  overflow: hidden;
 }
 
 .innermodal {
