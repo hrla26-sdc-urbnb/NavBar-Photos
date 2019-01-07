@@ -22,7 +22,7 @@ export default class PhotoDisplay extends React.Component {
 
   getPhotos() {
     const randNum = Math.floor(Math.random() * 100);
-    axios.get(`api/photos/${randNum}`)
+    axios.get(`http://3.87.49.14:3001/api/photos/${randNum}`)
     .then(p => {
       const photos = p.data.map(obj => obj.url);
       this.setState({ photos });
