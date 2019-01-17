@@ -10,10 +10,6 @@ const db = require('./index');
 // });
 
 const Photos = db.define('photos', {
-  // url: Sequelize.STRING,
-  // description: Sequelize.STRING,
-  // listing_id: Sequelize.INTEGER,
-  // id: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true },
   listing_id: Sequelize.INTEGER,
   img_url: Sequelize.STRING
 },
@@ -21,7 +17,7 @@ const Photos = db.define('photos', {
   timestamps: false,
   freezeTableName: true,
 });
-
+Photos.removeAttribute('id');
 // Listings.sync();
 Photos.sync(()=>{
   console.log("synced table");
