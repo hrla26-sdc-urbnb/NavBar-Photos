@@ -9,25 +9,24 @@ const writeStream = fs.createWriteStream('/Users/jingjing/Desktop/data.csv');
 var count=0;
 
 
-writeStream.write('id, listing_id, img_url');
+writeStream.write('listing_id, img_url');
 
 
 function writeOneMillionTimes(writer, encoding, callback) {
   var i = 10000000;
   var startIndex=1;
-  var idIndex=0;
+  // var idIndex=0;
   write();
   function write() {
     var ok = true;
     do {
       i -= 1;
-      count +=1;
       if(count===5){
         count =0;
         startIndex +=1;
       }
       count +=1;
-      idIndex += 1;
+      // idIndex += 1;
       if (i === 0) {
         // last time!
         writer.write(`\n${startIndex},${faker.image.imageUrl()}`, encoding, callback);

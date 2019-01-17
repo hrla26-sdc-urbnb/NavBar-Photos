@@ -21,15 +21,17 @@ export default class PhotoDisplay extends React.Component {
   }
 
   getPhotos() {
-    const randNum = Math.floor(Math.random() * 100);
-    axios.get(`http://3.87.49.14:3001/api/photos/${randNum}`)
+    const randNum = Math.floor(Math.random() * 2000000);
+    axios.get(`54.183.63.131:3001/api/photos/${randNum}`)
     .then(p => {
-      const photos = p.data.map(obj => obj.url);
+      console.log("DATA: ", p.data)
+      const photos = p.data.map(obj => obj.img_url);
       this.setState({ photos });
     });
   }
 
   render() {
+    console.log("STATE: ", this.state.photos)
     return (
       <div className={s.photodisplaywrapper}>
         <div className={s.bigphotocontainer}>

@@ -10,12 +10,12 @@ CREATE DATABASE urbnb;
 -- );
 
 -- LOAD DATA LOCAL INFILE './data.csv' INTO TABLE photos FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'  ignore 1 lines;
-\COPY photos(id, listing_id, img_url) FROM '/Users/jingjing/Desktop/data.csv' DELIMITER ',' CSV HEADER;
-
+\COPY photos(listing_id, img_url) FROM '/Users/jingjing/Desktop/data.csv' DELIMITER ',' CSV HEADER;
+-- \COPY photos(listing_id, img_url) FROM '/home/ubuntu/data.csv' DELIMITER ',' CSV HEADER;
 CREATE INDEX listing_id_index
 ON photos (listing_id);
 
-ALTER TABLE photos DROP COLUMN id;
+-- ALTER TABLE photos DROP COLUMN id;
 ALTER TABLE photos ADD COLUMN id SERIAL;
 ALTER TABLE photos ADD PRIMARY KEY (id);
 
