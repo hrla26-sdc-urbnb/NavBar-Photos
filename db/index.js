@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-const db = new Sequelize('urbnb', 'sdcsdc', '', {
+const db = new Sequelize('urbnb', 'ubuntu', 'sdcsdc', {
   host: 'localhost',
   dialect: 'postgres',
   pool: {
