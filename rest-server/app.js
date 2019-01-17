@@ -14,7 +14,10 @@ app.use(express.static(path.join(__dirname, '../react-client/public')));
 app.get('/api/photos/:id', (req, res) => {
   if (req.params.id < 2000000) {
     Photos.findAll({ attributes: ['img_url'], where: { listing_id: req.params.id }, limit: 5 })
-      .then(data => res.status(200).send(data))
+      .then(data => {
+        console.log("haha")
+        res.status(200).send(data)
+      })
       .catch(err => console.log(err));
   } else {
     Photos.findAll({ where: { listing_id: (req.params.id - 10000000) } })
