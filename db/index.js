@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 
-const db = new Sequelize('airbnb', 'root', 'password', {
+const db = new Sequelize('urbnb', 'jingjing', '', {
   host: 'localhost',
-  dialect: 'mysql',
+  dialect: 'postgres',
   pool: {
     max: 5,
     min: 0,
