@@ -15,8 +15,9 @@ app.use(express.static(path.join(__dirname, '../react-client/public')));
 
 
 
-app.get('/loaderio-f3929ec5e029861abcafea0e45c74b0c.txt', function(req, res) {
-  res.sendFile("/home/ubuntu/NavBar-Photos/loaderio-27a37d419f897c66b562697d53b60235.txt");
+app.get('/loaderio-27a37d419f897c66b562697d53b60235.txt', function(req, res) {
+  // res.sendFile("/home/ubuntu/NavBar-Photos/react-client/public/loaderio-27a37d419f897c66b562697d53b60235.txt");
+  res.sendFile("/Users/jingjing/Desktop/NavBar-Photos/react-client/public/loaderio-27a37d419f897c66b562697d53b60235.txt");
 });
 app.get('/api/photos/:id', (req, res) => {
   if (req.params.id < 2000000) {
