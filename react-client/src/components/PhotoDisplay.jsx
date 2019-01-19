@@ -10,19 +10,20 @@ export default class PhotoDisplay extends React.Component {
     this.state = {
       idxPhotoHovered: null,
       photoHovered: false,
-      photos: []
+      photos: ["http://lorempixel.com/640/480", "http://lorempixel.com/640/480", "http://lorempixel.com/640/480", "http://lorempixel.com/640/480", "http://lorempixel.com/640/480"]
     }
     this.getPhotos = this.getPhotos.bind(this);
   }
 
   componentDidMount() {
     this.getPhotos();
-    document.addEventListener('click', (e) => console.log(e.target.id));
+    // document.addEventListener('click', (e) => console.log(e.target.id));
   }
 
   getPhotos() {
     const randNum = Math.floor(Math.random() * 2000000);
-    axios.get(`http://54.183.63.131:3001/api/photos/${randNum}`)
+    // axios.get(`http://localhost:3001/api/photos/${randNum}`)
+    axios.get(`http://localhost:3001/api/photos/1000`)
     .then(p => {
       console.log("DATA: ", p.data)
       const photos = p.data.map(obj => obj.img_url);

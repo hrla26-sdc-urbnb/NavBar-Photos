@@ -1,3 +1,4 @@
+require('newrelic')
 var path = require('path');
 var SRC_DIR = path.join(__dirname, './react-client/src/index.jsx');
 var DIST_DIR = path.join(__dirname, './react-client/public');
